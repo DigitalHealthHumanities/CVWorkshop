@@ -1,0 +1,201 @@
+<h1 id="the-minimal-light-theme">The Minimal Light Theme</h1>
+
+<p><a href="https://github.com/yaoyao-liu/minimal-light/blob/main/LICENSE"><img src="https://img.shields.io/github/license/yaoyao-liu/minimal-light?style=flat-square&amp;logo=creative-commons&amp;color=EF9421" alt="LICENSE" /></a></p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>[<a href="https://minimal-light-theme.yliu.me/">Demo the theme</a>]  [<a href="https://github.com/yaoyao-liu/minimal-light/blob/master/README_zh_Hans.md">简体中文</a></td>
+      <td><a href="https://github.com/yaoyao-liu/minimal-light/blob/master/README_zh_Hant.md">繁體中文</a></td>
+      <td><a href="https://github.com/yaoyao-liu/minimal-light/blob/master/README_de.md">Deutsche</a>]</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><em>This is the source code of my homepage. I build this website based on <a href="https://github.com/orderedlist/minimal">minimal</a>.</em>
+<br />
+<em>Feel free to use and share the source code anywhere you like.</em></p>
+
+<p>The latest version of my homepage is available here: [<a href="https://github.com/yaoyao-liu/yaoyao-liu.github.io">link</a>]</p>
+
+<h2 id="features">Features</h2>
+
+<ul>
+  <li>Simple and elegant personal homepage theme</li>
+  <li>Jekyll theme, automatically deployed by GitHub Pages</li>
+  <li>Basic search engine optimization</li>
+  <li>Mobile friendly</li>
+  <li>Supporting Markdown</li>
+  <li>Supporting dark mode</li>
+</ul>
+
+<h2 id="project-architecture">Project Architecture</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.
+├── _data                    
+|   └── publications.yml                      # the YAML file for publications
+├── _includes                    
+|   ├── publications.md                       # the Markdown file for publications
+|   └── services.md                           # the Markdown file for services
+├── _layouts                  
+|   └── homepage.html                         #  the html template for the homepage 
+├── _sass
+|   ├── minimal-light.scss                    #  this file will be compiled into a CSS file to control the style of the page              
+|   └── minimal-light-no-dark-mode.scss       #  this file is similar to minimal-light.scss with the dark mode disabled
+├── assets                                    #  some files
+├── html_source_file                          #  compiled HTML files
+├── .gitignore                                #  this file specifies intentionally untracked files that Git should ignore
+├── CNAME                                     #  the custom domain, will be used by GitHub page sevice
+├── Gemfile                                   #  a RubyGems related file
+├── LICENSE                                   #  the license file
+├── README.md                                 #  the readme file (English)
+├── README_de.md                              #  the readme file (German)
+├── README_zh_Hans.md                         #  the readme file (Simplified Chinese)
+├── README_zh_Hant.md                         #  the readme file (Traditional Chinese)
+├── _config.yml                               #  the Jekyll configuration file, including some options of the page  
+└── index.md                                  #  the content of the index page, using Markdown
+</code></pre></div></div>
+
+<h2 id="getting-started">Getting Started</h2>
+
+<p>This template can be used in the following two ways:</p>
+<ul>
+  <li><strong>Using with the GitHub Pages Service.</strong> GitHub will provide you with a server to generate and host web pages.</li>
+  <li><strong>Using locally with Jekyll.</strong> You may install Jekyll on your own computer and generate static web pages (i.e., HTML files) with this template. After that, you may upload the HTML files to your server.</li>
+</ul>
+
+<p>The detailed instructions are available below.</p>
+
+<h3 id="using-with-the-github-pages-service">Using with the GitHub Pages Service</h3>
+
+<p>There are two ways to use this template on GitHub:</p>
+
+<h4 id="fork-this-repository">Fork this repository</h4>
+<ul>
+  <li>
+    <p>Fork this repository (or <a href="https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-repository-from-a-template">use this repository as a template</a>) and change the name to <code class="language-plaintext highlighter-rouge">your-username.github.io</code>.</p>
+  </li>
+  <li>
+    <p>Enable the GitHub pages for that repository following the steps <a href="https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site#creating-your-site">here</a>.</p>
+  </li>
+</ul>
+
+<h4 id="using-this-repository-as-a-remote-theme">Using this repository as a remote theme</h4>
+<p>To use this theme, add the following to your repository’s <code class="language-plaintext highlighter-rouge">_config.yml</code>:</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">remote_theme</span><span class="pi">:</span> <span class="s">yaoyao-liu/minimal-light</span>
+</code></pre></div></div>
+
+<p>Please note that adding the above line will directly apply all the default settings in this repository to yours.</p>
+
+<p>If you hope to edit any files (e.g., <code class="language-plaintext highlighter-rouge">index.md</code>), you still need to copy them to your repository.</p>
+
+<h3 id="using-locally-with-jekyll">Using Locally with Jekyll</h3>
+
+<p>First, install <a href="https://www.ruby-lang.org/en/">Ruby</a> and <a href="https://jekyllrb.com/">Jekyll</a>. The install instructions can be found here: <a href="https://jekyllrb.com/docs/installation/#guides">https://jekyllrb.com/docs/installation/#guides</a></p>
+
+<p>Then, clone this repository:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone https://github.com/yaoyao-liu/minimal-light.git
+<span class="nb">cd </span>minimal-light
+</code></pre></div></div>
+<p>Install and run:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bundle <span class="nb">install
+</span>bundle add webrick
+bundle <span class="nb">exec </span>jekyll server
+</code></pre></div></div>
+<p>View the live page using <code class="language-plaintext highlighter-rouge">localhost</code>:
+<a href="http://localhost:4000">http://localhost:4000</a>. You can get the HTML files in <code class="language-plaintext highlighter-rouge">_site</code> folder.</p>
+
+<h3 id="using-the-html-version">Using the HTML version</h3>
+
+<p>The compiled HTML files are available in the <code class="language-plaintext highlighter-rouge">html_source_file</code> folder. If you don’t like Jekyll, you may directly edit and use the HTML version.</p>
+
+<h2 id="customizing">Customizing</h2>
+
+<h3 id="configuration-variables">Configuration variables</h3>
+
+<p>The Minimal Light theme will respect the following variables, if set in your site’s <code class="language-plaintext highlighter-rouge">_config.yml</code>:</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Basic Information </span>
+<span class="na">title</span><span class="pi">:</span> <span class="s">Your Name</span>
+<span class="na">position</span><span class="pi">:</span> <span class="s">Ph.D. Student</span>
+<span class="na">affiliation</span><span class="pi">:</span> <span class="s">Your Affiliation</span>
+<span class="na">email</span><span class="pi">:</span> <span class="s">yourname (at) example.edu</span>
+
+<span class="c1"># Search Engine Optimization (SEO)</span>
+<span class="c1"># The following information is used to improve the website traffic from search engines, e.g., Google.</span>
+<span class="na">keywords</span><span class="pi">:</span> <span class="s">minimal light</span>
+<span class="na">description</span><span class="pi">:</span> <span class="s">The Minimal Light is a simple and elegant jekyll theme for academic personal homepage.</span>
+<span class="na">canonical</span><span class="pi">:</span> <span class="s">https://minimal-light-theme.yliu.me/</span>
+
+<span class="c1"># Links </span>
+<span class="c1"># If you don't need one of them, you may delete the corresponding line.</span>
+<span class="na">google_scholar</span><span class="pi">:</span> <span class="s">https://scholar.google.com/</span>
+<span class="na">cv_link</span><span class="pi">:</span> <span class="s">assets/files/curriculum_vitae.pdf</span>
+<span class="na">github_link</span><span class="pi">:</span> <span class="s">https://github.com/</span>
+<span class="na">linkedin</span><span class="pi">:</span> <span class="s">https://www.linkedin.com/</span>
+<span class="na">twitter</span><span class="pi">:</span> <span class="s">https://twitter.com/</span>
+
+<span class="c1"># Images (e.g., your profile picture and your website's favicon) </span>
+<span class="c1"># "favicon" and "favicon_dark" are used for the light and dark modes, respectively. </span>
+<span class="na">avatar</span><span class="pi">:</span> <span class="s">./assets/img/avatar.png</span>
+<span class="na">favicon</span><span class="pi">:</span> <span class="s">./assets/img/favicon.png</span>
+<span class="na">favicon_dark</span><span class="pi">:</span> <span class="s">./assets/img/favicon-dark.png</span>
+
+<span class="c1"># Footnote</span>
+<span class="c1"># You may use the option to disable the footnote, "Powered by Jekyll and Minimal Light theme."</span>
+<span class="na">enable_footnote</span><span class="pi">:</span> <span class="no">true</span>
+
+<span class="c1"># Auto Dark Mode</span>
+<span class="c1"># You may use the option to disable the automatic dark theme</span>
+<span class="na">auto_dark_mode</span><span class="pi">:</span> <span class="no">true</span>
+
+<span class="c1"># Font</span>
+<span class="c1"># You can use this option to choose between Serif or Sans Serif fonts.</span>
+<span class="na">font</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Serif"</span> <span class="c1"># or "Sans Serif"</span>
+
+<span class="c1"># Google Analytics ID</span>
+<span class="c1"># Please remove this if you don't use Google Analytics</span>
+<span class="na">google_analytics</span><span class="pi">:</span> <span class="s">UA-111540567-4</span>
+</code></pre></div></div>
+<h3 id="edit-indexmd">Edit <code class="language-plaintext highlighter-rouge">index.md</code></h3>
+
+<p>Create <code class="language-plaintext highlighter-rouge">index.md</code> and add your personal information. It supports <strong>Markdown</strong> and <strong>HTML</strong> syntax.</p>
+
+<h3 id="edit-included-files">Edit included files</h3>
+
+<p>There are two markdown files included in <code class="language-plaintext highlighter-rouge">index.md</code>. They are <code class="language-plaintext highlighter-rouge">_includes/publications.md</code> and <code class="language-plaintext highlighter-rouge">_includes/service.md</code>, respectively. These two files also support <strong>Markdown</strong> and <strong>HTML</strong> syntax. If you don’t hope to include these two files, you may remove the following lines in <code class="language-plaintext highlighter-rouge">index.md</code>:
+https://github.com/yaoyao-liu/minimal-light/blob/b38070cd0b6bce45d8a885f3828549af8f82b7cb/index.md?plain=1#L21-L23</p>
+
+<p>If you hope to edit the publication list without changing the format, you may edit <code class="language-plaintext highlighter-rouge">_data/publications.yml</code>:
+https://github.com/yaoyao-liu/minimal-light/blob/77b1b3b31d4561091bcd739f37a2e1880e8b5ca5/_data/publications.yml#L3-L11</p>
+
+<h3 id="stylesheet">Stylesheet</h3>
+
+<p>If you’d like to add your own custom styles, you may edit <code class="language-plaintext highlighter-rouge">_sass/minimal-light.scss</code>.</p>
+
+<h3 id="layouts">Layouts</h3>
+
+<p>If you’d like to change the theme’s HTML layout, you may edit <code class="language-plaintext highlighter-rouge">_layout/homepage.html</code>.</p>
+
+<h2 id="license">License</h2>
+
+<p>This work is licensed under a <a href="https://github.com/yaoyao-liu/minimal-light/blob/master/LICENSE">Creative Commons Zero v1.0 Universal</a> License.</p>
+
+<h2 id="acknowledgements">Acknowledgements</h2>
+
+<p>Our project uses the source code from the following repositories:</p>
+
+<ul>
+  <li>
+    <p><a href="https://github.com/pages-themes/minimal">pages-themes/minimal</a></p>
+  </li>
+  <li>
+    <p><a href="https://github.com/orderedlist/minimal">orderedlist/minimal</a></p>
+  </li>
+  <li>
+    <p><a href="https://github.com/alshedivat/al-folio">al-folio</a></p>
+  </li>
+</ul>

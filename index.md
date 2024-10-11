@@ -26,10 +26,10 @@ Testing here
 
 {% include_relative _includes/conferences.md %}
 
-{% include_relative _includes/art.md %} <!-- this line can be deleted if you do not do art -->
+<!-- {% include_relative _includes/art.md %} --> <!-- you can escape this line if you don't have any art examples -->
 
 {% include_relative _includes/grants.md %}
 
 {% include_relative _includes/awards.md %}
 
-{% include_relative _includes/service.md %}
+<!-- {% include_relative _includes/service.md %} -->
