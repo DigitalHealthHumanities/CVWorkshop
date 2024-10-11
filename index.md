@@ -31,3 +31,5 @@ Testing here
 {% include_relative _includes/grants.md %}
 
 {% include_relative _includes/awards.md %}
+
+{% include_relative _includes/service.md %}
