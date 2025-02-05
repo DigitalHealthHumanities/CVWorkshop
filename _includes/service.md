@@ -7,7 +7,7 @@
   <div class="col-sm-9" style="position: relative;padding-right: 15px;padding-left: 20px;">
       <div class="title"><b>{{ link.title }}</b></div>
       <div class="author">{% if link.institution %}{{ link.institution }} {% endif %}{% if link.years %}{{ link.years }}{% endif %}</div></div>
-    {% if link.notes %} 
+    {% if link.notes %}<br> 
       <strong> <i style="color:#e74d3c">{{ link.notes }}</i></strong>
       {% endif %}<br></div>
 {% endif %}
